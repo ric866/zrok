@@ -200,6 +200,8 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+      ziti-router:
+        condition: service_healthy
     volumes:
       - zrok2-config:/var/lib/zrok2
       - ./entrypoint-init.bash:/bootstrap/entrypoint-init.bash:ro
